@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h3 class="p-3">Proyectos.</h3>
-    <div class="row p-4">
-      <div class="col col-md-3">
-        <section class="nav flex-column">
-          <div class="card m-3" style="width: 18rem;" v-for="proyecto in proyectos" :key="proyecto.id">
+    <div class="proyectos">
+        <h3>Proyectos destacados</h3>
+        <div class="row">
+          <div class="col d-flex justify-content-around">
+            <div class="card" style="width: 18rem;" v-for="proyecto in proyectos" :key="proyecto.id">
               <img :src="proyecto.img" class="card-img-top custom-img" :alt="proyecto.nombre"/>
               <div class="card-body">
                 <h5 class="card-title">
@@ -13,46 +13,17 @@
                 <p class="card-text">{{ proyecto.descripcion }}</p>
               </div>
             </div>
-        </section>
-      </div>
-      <div class="col col-md-9">
-        <div v-if="$route.params.id === 'landingPage'">
-          <landing-page></landing-page>
-        </div>
-        <div v-else-if="$route.params.id === 'listaMotosiclista'">
-          <listaMotosiclista></listaMotosiclista>
-        </div>
-        <div v-else-if="$route.params.id === 'nuevaLista'">
-          <nuevaLista></nuevaLista>
-        </div>
-        <div v-else-if="$route.params.id === 'calculadora'">
-          <calculadora></calculadora>
-        </div>
-        <div v-else>
-          <h4>Nada.</h4>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
-import landingPage from "@/components/landingPage.vue";
-import listaMotosiclista from "@/components/listaMotosiclista.vue";
-import nuevaLista from "@/components/nuevaLista.vue";
-import listaDeProyectos from "@/components/listaDeProyectos.vue"
-import calculadora from "@/components/calculadora.vue"
 
 export default {
-  name: "proyectos",
-  components: {
-    landingPage,
-    listaMotosiclista,
-    nuevaLista,
-    listaDeProyectos,
-    calculadora
-  },
-  data() {
+    name:"listaDeProyectos",
+    data() {
     return {
       nombre: "Gabriel Joaquim",
       titulo: "Desarrollador de Vue.js y modelador 3D",
@@ -87,5 +58,21 @@ export default {
 </script>
 
 <style>
+.card {
+  margin-left: 20px;
+  width: 100%;
+}
 
+.card-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.custom-img {
+  width: 100%;
+  height: 200px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover;
+}
+.card-body {
+  font-size: 1.1rem;
+}
 </style>

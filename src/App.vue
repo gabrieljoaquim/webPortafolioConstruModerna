@@ -10,14 +10,19 @@
           <h4>Construmoderna</h4>
         </a>
         <div class="navbar-nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link>
+          <router-link to="/" class="mr-3">Presentacion</router-link>
+          <router-link to="/about" class="mr-3">Proyectos 3D</router-link>
+          <router-link to="/proyectos/landingPage" class="mr-3">Proyectos Vue.js</router-link>
         </div>
       </div>
      </div>
   </nav>
 
     <router-view class="vista"/>
+
+    <section>
+      <br/>
+    </section>
 
 </template>
 
@@ -29,7 +34,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1b1b1b;
 }
 
 nav {
@@ -44,7 +49,7 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #4268b9;
+  color: #5eadf8;
 }
 
 .logo{

@@ -415,10 +415,7 @@ export default {
 </script>
 
 <style scoped>
-.container-fluid {
-  margin-top: 10px;
-  box-shadow: 0,0,10,black;
-}
+
 .navbar {
   background: rgba(39, 60, 117, 0.7);
   box-shadow: 2px 2px 5px black;
