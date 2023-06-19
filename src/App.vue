@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg bg-indigo-700 fixed-top">
     <div class="container-fluid d-flex flex-row-reverse">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,12 +16,15 @@
       </div>
      </div>
   </nav>
-  <router-view/>
+
+    <router-view class="vista"/>
+
 </template>
 
 
 <style>
 #app {
+  background: linear-gradient(-45deg, #ffeb3b, #74efff, #9c27b0);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,7 +33,9 @@
 }
 
 nav {
-  padding: 30px;
+  background-color: var(--bs-cyan-500);
+  padding: 25px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav a {
@@ -44,5 +49,9 @@ nav a.router-link-exact-active {
 
 .logo{
   width: 100px;
+}
+
+.vista {
+  margin-top: 115px;
 }
 </style>
