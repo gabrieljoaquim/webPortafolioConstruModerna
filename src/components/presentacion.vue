@@ -17,6 +17,20 @@
         <p>Si estás interesado en colaborar conmigo o deseas discutir tus proyectos, no dudes en ponerte en contacto. Estaré encantado de hablar contigo y explorar cómo puedo ayudarte a alcanzar tus objetivos de diseño.</p>
 
         <p>¡Gracias por visitar mi portafolio!</p>
+
+          <div v-if="importName == 'landingPage'">
+            <h2>{{ importName }}</h2>
+            <landingPage/>
+          </div>
+          <div v-else-if="importName == 'listaMotosiclista'">
+            <listaMotosiclista/>
+          </div>
+          <div v-else-if="importName == 'nuevaLista'">
+            <nuevaLista/>
+          </div>
+          <div v-else></div>
+
+
       <div class="habilidades">
         <h3>Habilidades</h3>
         <ul>
@@ -30,7 +44,7 @@
         <h3>Proyectos destacados</h3>
         <ul>
           <li v-for="proyecto in proyectos" :key="proyecto.id">
-            <a :href="proyecto.enlace">{{ proyecto.nombre }}</a>
+            <router-link :to="`/${proyecto.importName}`">{{ proyecto.importName }}</router-link>
             <p>{{ proyecto.descripcion }}</p>
           </li>
         </ul>
@@ -50,6 +64,10 @@
 </template>
   
   <script>
+  import landingPage from '@/components/landingPage.vue'
+  import listaMotosiclista from '@/components/listaMotosiclista.vue'
+  import nuevaLista from '@/components/nuevaLista.vue'
+
 export default {
   name: "presentacion",
   data() {
@@ -63,43 +81,57 @@ export default {
           id: 1,
           nombre: "Proyecto 1",
           descripcion: "Descripción del proyecto 1.",
-          enlace: "https://proyecto1.com",
+          importName: 'proyectos/landingPage'
         },
         {
           id: 2,
           nombre: "Proyecto 2",
           descripcion: "Descripción del proyecto 2.",
-          enlace: "https://proyecto2.com",
+          importName: 'proyectos/listaMotosiclista'
         },
         {
           id: 3,
           nombre: "Proyecto 3",
           descripcion: "Descripción del proyecto 3.",
-          enlace: "https://proyecto3.com",
+          importName: 'proyectos/nuevaLista'
         },
       ],
     };
   },
-};
+  props:['importName'],
+  components: {
+    landingPage,
+    listaMotosiclista,
+    nuevaLista
+  },
+  methods: {
+    
+  },
+ }
+
+
 </script>
   <style scoped>
+  .container {
+  background: rgba(200, 200, 200, 0.3);
+}
 .row {
   margin-top: 50px;
 }
 
-/* .card {
+.card {
   margin-left: 20px;
   width: 100%;
-} */
+}
 
-/* .card-header {
+.card-header {
   font-size: 1.2rem;
   font-weight: bold;
-} */
+}
 
-/* .card-body {
+.card-body {
   font-size: 1.1rem;
-} */
+}
 
 .habilidades {
   margin-top: 30px;
@@ -127,5 +159,16 @@ ul {
   .fixed-md {
     position: fixed;
   }
+}
+
+.popup {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  z-index: 9999;
+  overflow: auto;
 }
 </style>
