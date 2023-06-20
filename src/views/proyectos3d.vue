@@ -10,7 +10,7 @@
                 <h5 class="card-title">
                   <router-link :to="`/${proyecto3d.nameRuta}`">{{ proyecto3d.name }}</router-link>
                 </h5>
-                <p class="card-text"></p>
+                <p class="card-text">{{ proyecto3d.descripcion }}</p>
               </div>
             </div>
         </section>
@@ -30,12 +30,10 @@
         </div>
       </div>
     </div>
-    <ListaDeProyectos3d/>
   </div>
 </template>
 
 <script>
-import ListaDeProyectos3d from '@/components/ListaDeProyectos3d.vue'
 import lovyEspejos from '@/components/lovyEspejos.vue'
 import muebleMetal from '@/components/muebleMetal.vue'
 import cocinaModerna from '@/components/cocinaModerna.vue'
@@ -50,21 +48,21 @@ export default {
         {
           id: 1,
           name: 'Cocima Moderna',
-          img: require('@/assets/imagenes3d/cocina6.effectsResult.png'),
+          img: require('@/assets/imagenes3d/cocinaTerminada.png'),
           descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda maxime omnis reprehenderit cupiditate autem non. Rerum debitis saepe nobis consectetur, consequuntur vitae dolorum quisquam illo veniam at repellat ad voluptatibus.',
           nameRuta: 'proyectos3d/cocinaModerna'
         },
         {
           id: 2,
           name: "lovyEspejos",
-          img: require('@/assets/imagenes3d/MB_Fogon_1.png'),
+          img: require('@/assets/imagenes3d/lovyTerminado.png'),
           descripcion: "Calcula rápidamente tus números con nuestra intuitiva calculadora: precisión y facilidad al alcance de tus dedos.",
           nameRuta: 'proyectos3d/lovyEspejos'
         },
         {
           id: 3,
           name: "muebleMetal",
-          img: require('@/assets/imagenes3d/smt.png'),
+          img: require('@/assets/imagenes3d/muebleMetalImagen.png'),
           descripcion: "Calcula rápidamente tus números con nuestra intuitiva calculadora: precisión y facilidad al alcance de tus dedos.",
           nameRuta: 'proyectos3d/muebleMetal'
         },
@@ -73,7 +71,6 @@ export default {
     }
   },
   components: {
-    ListaDeProyectos3d,
     cocinaModerna,
     muebleMetal,
     lovyEspejos,
