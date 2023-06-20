@@ -11,7 +11,7 @@
         </a>
         <div class="navbar-nav">
           <router-link to="/" class="mr-3">Presentacion</router-link>
-          <router-link to="/about" class="mr-3">Proyectos 3D</router-link>
+          <router-link to="/proyecto3d/cocinaModerna" class="mr-3">Proyectos 3D</router-link>
           <router-link to="/proyectos/landingPage" class="mr-3">Proyectos Vue.js</router-link>
         </div>
       </div>

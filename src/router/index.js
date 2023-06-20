@@ -9,20 +9,21 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'about',
-    component: function () {
-      return import('../views/AboutView.vue')
-    }
-  },
-  {
     path: '/proyectos/:id',
     name: 'proyectos',
     component: function () {
-      return import('../views/proyectos.vue');
+      return import('../views/proyectos.vue')
+    }
+  },
+  {
+    path: '/proyectos3d/:id',
+    name: 'proyectos3d',
+    component: function () {
+      return import('../views/proyectos3d.vue');
     },
     props: true
   },
+
 ]
 
 const router = createRouter({

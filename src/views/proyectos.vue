@@ -71,7 +71,7 @@ export default {
           nombre: "Formulario de contactos",
           img: require("@/assets/formularioContacto.png"),
           descripcion: "Conéctate con nosotros en segundos y déjanos ayudarte a hacer realidad tus proyectos.",
-          importName: 'proyectos/listaMotosiclista'
+          importName: 'proyectos/nuevaLista'
         },
         {
           id: 3,
