@@ -23,7 +23,7 @@
           <lovyEspejos></lovyEspejos>
         </div>
         <div v-else-if="$route.params.id === 'muebleMetal'">
-          <muebleMetal></muebleMetal>
+          <!-- <muebleMetal></muebleMetal> -->
         </div>
         <div v-else>
           <h4>Nada.</h4>
@@ -35,7 +35,7 @@
 
 <script>
 import lovyEspejos from '@/components/lovyEspejos.vue'
-import muebleMetal from '@/components/muebleMetal.vue'
+// import muebleMetal from '@/components/muebleMetal.vue'
 import cocinaModerna from '@/components/cocinaModerna.vue'
 
 export default {
@@ -72,7 +72,7 @@ export default {
   },
   components: {
     cocinaModerna,
-    muebleMetal,
+    // muebleMetal,
     lovyEspejos,
   },
   props: ['nameVista'],

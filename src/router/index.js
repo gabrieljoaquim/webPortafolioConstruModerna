@@ -9,6 +9,20 @@ const routes = [
     }
   },
   {
+    path: '/registro',
+    name: 'registro',
+    component: function () {
+      return import('../views/registro.vue')
+    }
+  },
+  {
+    path: '/pinturas',
+    name: 'Pinturas',
+    component: function () {
+      return import('../views/Pinturas.vue')
+    }
+  },
+  {
     path: '/proyectos/:id',
     name: 'proyectos',
     component: function () {

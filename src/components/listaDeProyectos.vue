@@ -3,8 +3,8 @@
     <div class="proyectos">
         <h3>Proyectos destacados</h3>
         <div class="row">
-          <div class="col d-flex justify-content-around">
-            <div class="card" style="width: 18rem;" v-for="proyecto in proyectos" :key="proyecto.id">
+          <div class="col">
+            <div class="presentacion shadow rounded mt-2" style="width: 22rem;" v-for="proyecto in proyectos" :key="proyecto.id">
               <img :src="proyecto.img" class="card-img-top custom-img" :alt="proyecto.nombre"/>
               <div class="card-body">
                 <h5 class="card-title">
@@ -58,9 +58,8 @@ export default {
 </script>
 
 <style>
-.card {
-  margin-left: 20px;
-  width: 100%;
+.presentacion {
+  border: 2px solid white;
 }
 
 .card-header {
