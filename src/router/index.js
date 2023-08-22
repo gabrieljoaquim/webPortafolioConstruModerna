@@ -23,6 +23,34 @@ const routes = [
     }
   },
   {
+    path: '/electricidad',
+    name: 'Electricidad',
+    component: function () {
+      return import('../views/Electricidad.vue')
+    }
+  },
+  {
+    path: '/metales',
+    name: 'metales',
+    component: function () {
+      return import('../views/metales.vue')
+    }
+  },
+  {
+    path: '/obras',
+    name: 'Obras',
+    component: function () {
+      return import('../views/Obras.vue')
+    }
+  },
+  {
+    path: '/plomeria',
+    name: 'Plomeria',
+    component: function () {
+      return import('../views/Plomeria.vue')
+    }
+  },
+  {
     path: '/proyectos/:id',
     name: 'proyectos',
     component: function () {
