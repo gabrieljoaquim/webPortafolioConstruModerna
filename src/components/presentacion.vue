@@ -1,22 +1,30 @@
 <template>
   <div class="row">
-    <div class="col-md">
-      <h1>{{ nombre }}</h1>
-      <h4>¡Bienvenido a mi portafolio!</h4>
+    <div class="col-md p-1">
 
-        <p>Me complace presentarme como un profesional altamente capacitado en el campo del diseño y desarrollo. Soy un diseñador 3D y renderista con experiencia en proyectos de arquitectura, diseño de interiores, mobiliario y otros ámbitos del diseño. Además, también me desempeño como diseñador web y programador junior especializado en Vue.js.</p>
-
-        <p>Con una sólida formación y habilidades técnicas, me dedico a crear modelos detallados y precisos utilizando las últimas herramientas y técnicas de modelado 3D. Mi experiencia en proyectos de arquitectura y diseño de interiores me ha permitido perfeccionar mis habilidades y alcanzar resultados sobresalientes.</p>
-
-        <p>Como renderista, me apasiona crear imágenes realistas que transmitan la esencia y la visión de cada diseño. Utilizando técnicas avanzadas de iluminación, texturizado y postproducción, puedo dar vida a tus modelos, creando renders impactantes y profesionales. Trabajo con software de vanguardia y domino herramientas como V-Ray y SketchUp para lograr resultados fotorealistas.</p>
-
-        <p>Además de mi experiencia en el campo del diseño 3D, también tengo conocimientos en diseño web y programación. Como programador junior especializado en Vue.js, puedo desarrollar aplicaciones web interactivas y funcionales que se adapten a tus necesidades específicas.</p>
-
-        <p>Mi objetivo es brindarte un servicio personalizado y de alta calidad, asegurándome de cumplir con tus expectativas y requisitos. No importa el tamaño de tu proyecto, estoy comprometido a trabajar contigo para crear diseños únicos e impresionantes que destaquen.</p>
-
-        <p>Si estás interesado en colaborar conmigo o deseas discutir tus proyectos, no dudes en ponerte en contacto. Estaré encantado de hablar contigo y explorar cómo puedo ayudarte a alcanzar tus objetivos de diseño.</p>
-
-        <p>¡Gracias por visitar mi portafolio!</p>
+        <div class="presentacion shadow rounded" style="width: 22rem;">
+          <div class="cabesa d-flex justify-content-center m-2">
+            <img class="border borde-3 rounded-circle" width="200" height="250" alt="foto" src="../assets/fotoCarnet.png"/>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">¡Bienvenido a mi portafolio!</h5>
+            <p class="card-text">¡Hola! Me complace presentarme como un profesional altamente capacitado en el campo del diseño y desarrollo.</p>
+            <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Imformacion...
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Soy un profesional altamente capacitado en diseño y desarrollo, con especialización en Vue.js y diseño 3D. Mi experiencia abarca proyectos de arquitectura, diseño interior y desarrollo web interactivo. Combino mi destreza en programación con Vue.js para crear aplicaciones web dinámicas y elegantes, y mi experiencia en diseño 3D me permite crear modelos precisos y renders realistas mediante técnicas avanzadas. Mi objetivo es fusionar estas habilidades para ofrecer un servicio personalizado y de alta calidad que cumpla tus expectativas en ambos campos. Si estás interesado en colaborar o discutir proyectos, no dudes en contactarme. ¡Gracias por considerar mi trabajo!
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
 
           <div v-if="importName == 'landingPage'">
             <h2>{{ importName }}</h2>
@@ -40,26 +48,10 @@
           <li>Renderizado</li>
         </ul>
       </div>
-      <div class="proyectos">
-        <h3>Proyectos destacados</h3>
-        <ul>
-          <li v-for="proyecto in proyectos" :key="proyecto.id">
-            <router-link :to="`/${proyecto.importName}`">{{ proyecto.importName }}</router-link>
-            <p>{{ proyecto.descripcion }}</p>
-          </li>
-        </ul>
+      <div>
+        <listaDeProyectos/>
       </div>
     </div>
-    <!-- <div class="col-md-6 fixed-bottom fised-md">
-      <div class="card bg-dark text-white" style="position: absolute; bottom: 0; width: 100%;">
-        <div class="card-header bg-primary">Información de contacto</div>
-        <div class="card-body">
-          <p>Correo electrónico: {{ email }}</p>
-          <p>Teléfono: {{ telefono }}</p>
-          <p>Sitio web: {{ sitioWeb }}</p>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
   
@@ -67,46 +59,18 @@
   import landingPage from '@/components/landingPage.vue'
   import listaMotosiclista from '@/components/listaMotosiclista.vue'
   import nuevaLista from '@/components/nuevaLista.vue'
+  import listaDeProyectos from '@/components/listaDeProyectos.vue'
 
 export default {
   name: "presentacion",
-  data() {
-    return {
-      nombre: "Gabriel Joaquim",
-      titulo: "Desarrollador de Vue.js y modelador 3D",
-      descripcion:
-        "Soy un programador con experiencia en Vue.js, Node.js, y modelado 3D y renderizado. Me encanta crear aplicaciones web interactivas y visualmente atractivas.",
-      proyectos: [
-        {
-          id: 1,
-          nombre: "Proyecto 1",
-          descripcion: "Descripción del proyecto 1.",
-          importName: 'proyectos/landingPage'
-        },
-        {
-          id: 2,
-          nombre: "Proyecto 2",
-          descripcion: "Descripción del proyecto 2.",
-          importName: 'proyectos/listaMotosiclista'
-        },
-        {
-          id: 3,
-          nombre: "Proyecto 3",
-          descripcion: "Descripción del proyecto 3.",
-          importName: 'proyectos/nuevaLista'
-        },
-      ],
-    };
-  },
+  
   props:['importName'],
   components: {
     landingPage,
     listaMotosiclista,
-    nuevaLista
-  },
-  methods: {
-    
-  },
+    nuevaLista,
+    listaDeProyectos
+  }
  }
 
 
@@ -119,18 +83,9 @@ export default {
   margin-top: 50px;
 }
 
-.card {
-  margin-left: 20px;
-  width: 100%;
-}
-
-.card-header {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.card-body {
-  font-size: 1.1rem;
+.presentacion {
+  background: rgba(200, 200, 200, 0.3);
+  border: 2px solid white;
 }
 
 .habilidades {

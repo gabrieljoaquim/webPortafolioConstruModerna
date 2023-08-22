@@ -1,22 +1,18 @@
 <template>
   <div>
-    <h3>Proyectos. {{ $route.params.id }}</h3>
-    <div class="row">
+    <h3 class="p-3">Proyectos.</h3>
+    <div class="row p-4">
       <div class="col col-md-3">
         <section class="nav flex-column">
-            <router-link  class="nav-item" :to="proyecto.name" v-for="(proyecto, index) of proyectos" :key="index ">
-                
-                <div class="card" style="width: 18rem;">
-                    <img src="@/assets/logo.png" class="card-img-top" alt="proyecto.id">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ proyecto.name }}</h5>
-                        <p class="card-text">{{ proyecto.description }}</p>
-                        <button>{{ proyecto.name }}</button>
-                    </div>
-                </div>
-
-
-            </router-link>
+          <div class="card m-3" style="width: 18rem;" v-for="proyecto in proyectos" :key="proyecto.id">
+              <img :src="proyecto.img" class="card-img-top custom-img" :alt="proyecto.nombre"/>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <router-link :to="`/${proyecto.importName}`">{{ proyecto.nombre }}</router-link>
+                </h5>
+                <p class="card-text">{{ proyecto.descripcion }}</p>
+              </div>
+            </div>
         </section>
       </div>
       <div class="col col-md-9">
@@ -28,6 +24,9 @@
         </div>
         <div v-else-if="$route.params.id === 'nuevaLista'">
           <nuevaLista></nuevaLista>
+        </div>
+        <div v-else-if="$route.params.id === 'calculadora'">
+          <calculadora></calculadora>
         </div>
         <div v-else>
           <h4>Nada.</h4>
@@ -41,6 +40,8 @@
 import landingPage from "@/components/landingPage.vue";
 import listaMotosiclista from "@/components/listaMotosiclista.vue";
 import nuevaLista from "@/components/nuevaLista.vue";
+import listaDeProyectos from "@/components/listaDeProyectos.vue"
+import calculadora from "@/components/calculadora.vue"
 
 export default {
   name: "proyectos",
@@ -48,33 +49,43 @@ export default {
     landingPage,
     listaMotosiclista,
     nuevaLista,
+    listaDeProyectos,
+    calculadora
   },
   data() {
     return {
+      nombre: "Gabriel Joaquim",
+      titulo: "Desarrollador de Vue.js y modelador 3D",
+      descripcion:
+        "Soy un programador con experiencia en Vue.js, Node.js, y modelado 3D y renderizado. Me encanta crear aplicaciones web interactivas y visualmente atractivas.",
       proyectos: [
         {
           id: 1,
-          name: "landingPage",
-          description: "Descripcion del proyecto: LandingPage.",
+          nombre: "LandingPage",
+          img: require("@/assets/landingPage.png"),
+          descripcion: "Descubre el poder de Vue.js y transforma tus ideas en experiencias web excepcionales.",
+          importName: 'proyectos/landingPage'
         },
         {
           id: 2,
-          name: "listaMotosiclista",
-          description: "Descripcion del proyecto: listaMotosiclista.",
+          nombre: "Formulario de contactos",
+          img: require("@/assets/formularioContacto.png"),
+          descripcion: "Conéctate con nosotros en segundos y déjanos ayudarte a hacer realidad tus proyectos.",
+          importName: 'proyectos/nuevaLista'
         },
         {
-          id: 1,
-          name: "nuevaLista",
-          description: "Descripcion del proyecto: nuevaLista.",
+          id: 3,
+          nombre: "Calculadora",
+          img: require("@/assets/calculadora.png"),
+          descripcion: "Calcula rápidamente tus números con nuestra intuitiva calculadora: precisión y facilidad al alcance de tus dedos.",
+          importName: 'proyectos/calculadora'
         },
       ],
     };
   },
-};
+}
 </script>
 
 <style>
-.col-md-9 {
-    background: rgba(200,200,200,0.5);
-}
+
 </style>

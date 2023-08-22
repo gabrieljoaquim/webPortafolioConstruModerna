@@ -9,20 +9,35 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/registro',
+    name: 'registro',
     component: function () {
-      return import('../views/AboutView.vue')
+      return import('../views/registro.vue')
+    }
+  },
+  {
+    path: '/pinturas',
+    name: 'Pinturas',
+    component: function () {
+      return import('../views/Pinturas.vue')
     }
   },
   {
     path: '/proyectos/:id',
     name: 'proyectos',
     component: function () {
-      return import('../views/proyectos.vue');
+      return import('../views/proyectos.vue')
+    }
+  },
+  {
+    path: '/proyectos3d/:id',
+    name: 'proyectos3d',
+    component: function () {
+      return import('../views/proyectos3d.vue');
     },
     props: true
   },
+
 ]
 
 const router = createRouter({
