@@ -49,7 +49,7 @@ export default {
     padding: 5px;
     display: flex;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .elemento {

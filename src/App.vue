@@ -1,7 +1,6 @@
 <template>
   <div class="app">
     <navbar></navbar>
-    <carrouselMenu/>
 
     <router-view class="vista"/>
 
@@ -13,13 +12,11 @@
 
 <script>
 import navbar from "@/components/navbar.vue"
-import carrouselMenu from "@/components/carrouselNavbar.vue"
 
 export default{
   name: "Principal",
   components: {
     navbar,
-    carrouselMenu
   }
 
 
