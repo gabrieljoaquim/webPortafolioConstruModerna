@@ -1,6 +1,5 @@
 <template>
   <div class="home container-fluid">
-    <!-- <presentacion/> -->
 
     <div class="row">
       <div
@@ -143,14 +142,14 @@
 
 <script>
 // @ is an alias to /src
-import presentacion from '@/components/presentacion.vue'
+
 import carrouselMenu from '@/components/carrouselNavbar.vue'
 import contacto from '@/components/contacto.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    presentacion,
+
     carrouselMenu,
     contacto
   }
