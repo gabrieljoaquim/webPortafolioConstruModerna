@@ -1,5 +1,11 @@
 <template>
-<div class="container-fluid">
+<div class="container">
+    <div class="card" style="width: 100%;">
+    <img src="@/assets/logo.png" class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-text">Este registro se utiliza para actualizar nuestra base de datos de clientes y brindarte acceso a nuestras promociones. De esta manera, estarás siempre informado acerca de las ofertas y descuentos que tenemos para ti.</p>
+    </div>
+    </div>
     <div class="seccion">
         <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
@@ -9,6 +15,9 @@
     </div>
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Clave" aria-label="Clave" aria-describedby="basic-addon1">
@@ -23,7 +32,7 @@
         </label>
     </div>
     <div class="input-group mb-3 d-grid gap-2">
-        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+        <button type="button" class="btn btn-primary btn-sm">Enviar</button>
     </div>
     </div>
 </div>
@@ -38,11 +47,11 @@ name: 'registro',
 
 <style scoped>
 
-    .container-fluid{
-        height: 100vh;
-    }
     .seccion{
         height: 400px;
         padding-top: 100px;
+    }
+    .card{
+        background: none;
     }
 </style>

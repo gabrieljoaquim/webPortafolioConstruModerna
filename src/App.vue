@@ -1,12 +1,7 @@
 <template>
   <div class="app">
-    <navbar></navbar>
-
-    <router-view class="vista"/>
-
-    <section>
-      <br/>
-    </section>
+    <navbar class="navbar"></navbar>
+    <router-view class="container-fluid"/>
   </div>
 </template>
 
@@ -26,7 +21,7 @@ export default{
 
 <style>
 .app {
-  background: linear-gradient(-45deg, #333333, #999999, #666666);;
+  background: linear-gradient(-45deg, #1b1b1b, #525151, #333333);;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -34,7 +29,13 @@ export default{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #1b1b1b;
+  color: white;
   height: 100%;
 }
+.navbar{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
 </style>

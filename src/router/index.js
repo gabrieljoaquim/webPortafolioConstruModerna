@@ -23,10 +23,10 @@ const routes = [
     }
   },
   {
-    path: '/electricidad',
-    name: 'Electricidad',
+    path: '/carpinteria',
+    name: 'Carpinteria',
     component: function () {
-      return import('../views/Electricidad.vue')
+      return import('../views/Carpinteria.vue')
     }
   },
   {
