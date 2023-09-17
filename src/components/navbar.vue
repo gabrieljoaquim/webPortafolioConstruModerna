@@ -14,7 +14,7 @@
               <router-link class="nav-link" to="/">Presentacion</router-link>  
             </li>
             <li class="nav-item">  
-              <router-link class="nav-link" to="/proyectos3d/cocinaModerna">Proyectos 3D</router-link>
+              <router-link class="nav-link" to="/galeria">Galeria.</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/proyectos/landingPage">Proyectos Vue.js</router-link>

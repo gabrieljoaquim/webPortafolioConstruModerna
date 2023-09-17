@@ -51,17 +51,10 @@ const routes = [
     }
   },
   {
-    path: '/proyectos/:id',
-    name: 'proyectos',
+    path: '/galeria',
+    name: 'Galeria',
     component: function () {
-      return import('../views/proyectos.vue')
-    }
-  },
-  {
-    path: '/proyectos3d/:id',
-    name: 'proyectos3d',
-    component: function () {
-      return import('../views/proyectos3d.vue');
+      return import('../views/Galeria.vue');
     },
     props: true
   },
