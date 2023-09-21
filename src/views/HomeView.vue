@@ -1,6 +1,5 @@
 <template>
   <div class="home container-fluid">
-
     <div class="row">
       <div
         class="portada col shadow d-flex align-items-center justify-content-center"
@@ -31,81 +30,166 @@
       </p>
     </div>
     <div class="servicios shadow p-1">
-        <div class="row">
-            <p class="text-center fs-2 mb-3">Lo que Hacemos</p>
-            <p class="fs-5 p-3">
-              En ConstruModerna, ofrecemos una amplia gama de servicios
-              especializados para ayudarte a lograr tus objetivos en el ámbito de la
-              construcción y el diseño moderno. Nuestros servicios incluyen:
-            </p>
-        </div>
+      <div class="row">
+        <p class="text-center fs-2 mb-3">Nuestros Servicios</p>
+        <p class="fs-5 p-3">
+          En ConstruModerna, ofrecemos una amplia gama de servicios
+          especializados en el ámbito de la construcción y el diseño moderno.
+          Algunos de nuestros servicios clave incluyen:
+        </p>
+      </div>
+
       <div class="row">
         <div class="col-sm-6">
-          <div class="card m-3">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('modelado3d')"
+            style="cursor: pointer"
+          >
             <div class="card-body">
-              <h5 class="card-title text-end fs-4">Modelado 3D:</h5>
+              <h5 class="card-title text-end fs-4">
+                Modelado 3D y Planificación:
+              </h5>
               <p class="card-text text-end fs-6">
-                Transformamos tus conceptos en modelos tridimensionales
-                detallados y realistas que te permiten visualizar y perfeccionar
-                tu diseño antes de la construcción.
+                Transformamos tus ideas en modelos tridimensionales detallados
+                que te permiten visualizar y planificar proyectos de
+                construcción con precisión.
               </p>
             </div>
           </div>
         </div>
+
         <div class="col-sm-6">
-          <div class="card m-3">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('obras')"
+            style="cursor: pointer"
+          >
             <div class="card-body">
-              <h5 class="card-title text-start fs-4">Renderizado:</h5>
+              <h5 class="card-title text-start fs-4">Albañilería:</h5>
               <p class="card-text text-start fs-6">
-                Creamos imágenes fotorrealistas y videos que muestran tu
-                proyecto en su máxima expresión, permitiéndote presentarlo de
-                manera efectiva a tus clientes y colaboradores.
+                Realizamos obras de albañilería en general, incluyendo obras
+                negras y grises, para brindar solidez y estructura a tus
+                proyectos.
               </p>
             </div>
           </div>
         </div>
+
         <div class="col-sm-6">
-          <div class="card m-3">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('plomeria')"
+            style="cursor: pointer"
+          >
             <div class="card-body">
-              <h5 class="card-title text-end fs-4">Animación 3D:</h5>
+              <h5 class="card-title text-end fs-4">Plomería:</h5>
               <p class="card-text text-end fs-6">
-                Aportamos vida y movimiento a tus diseños, lo que facilita la
-                comunicación de conceptos complejos y da vida a tus proyectos.
+                Ofrecemos servicios de plomería tanto para aguas blancas como
+                negras, garantizando un sistema de agua eficiente y confiable.
               </p>
             </div>
           </div>
         </div>
+
         <div class="col-sm-6">
-          <div class="card m-3">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('electricidad')"
+            style="cursor: pointer"
+          >
             <div class="card-body">
-              <h5 class="card-title text-start fs-4">Hologramas 3D:</h5>
+              <h5 class="card-title text-start fs-4">
+                Electricidad Residencial:
+              </h5>
               <p class="card-text text-start fs-6">
-                Rompemos barreras al ofrecer presentaciones sorprendentes y
-                holográficas de tus proyectos.
+                Realizamos instalaciones eléctricas residenciales seguras y
+                eficientes, brindando energía confiable para tus proyectos.
               </p>
             </div>
           </div>
         </div>
+
         <div class="col-sm-6">
-          <div class="card m-3">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('pinturas')"
+            style="cursor: pointer"
+          >
             <div class="card-body">
-              <h5 class="card-title text-end fs-4">Realidad Virtual:</h5>
+              <h5 class="card-title text-end fs-4">Pintura y Acabados:</h5>
               <p class="card-text text-end fs-6">
-                Te llevamos al futuro con experiencias de realidad virtual que
-                permiten a tus clientes explorar tus diseños como si estuvieran
-                realmente allí.
+                Destacamos la estética de tus proyectos con nuestros servicios
+                de pintura y acabados de alta calidad.
               </p>
             </div>
           </div>
-        </div>   
+        </div>
+
         <div class="col-sm-6">
-          <div class="card m-3">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('metales')"
+            style="cursor: pointer"
+          >
             <div class="card-body">
-              <h5 class="card-title text-start fs-4">Videos de Arquitectura 3D:</h5>
+              <h5 class="card-title text-start fs-4">Herrería y Soldadura:</h5>
               <p class="card-text text-start fs-6">
-                Creamos videos cautivadores que ofrecen recorridos virtuales por
-                tus diseños, sumergiendo a tus clientes en una experiencia
-                inmersiva.
+                Realizamos trabajos de herrería y soldadura, incluyendo rejas,
+                escaleras, puertas y estructuras metálicas de alta calidad.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('aluminios')"
+            style="cursor: pointer"
+          >
+            <div class="card-body">
+              <h5 class="card-title text-end fs-4">
+                Ventanería en Aluminio y Vidrio:
+              </h5>
+              <p class="card-text text-end fs-6">
+                Instalamos ventanas y puertas de alta calidad en aluminio y
+                vidrio, proporcionando soluciones estéticas y funcionales.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('revestimientos')"
+            style="cursor: pointer"
+          >
+            <div class="card-body">
+              <h5 class="card-title text-start fs-4">
+                Enchapes en Cerámicas y Porcelanato:
+              </h5>
+              <p class="card-text text-start fs-6">
+                Realizamos instalaciones de enchapes en cerámicas y porcelanato,
+                mejorando la estética y la durabilidad de tus espacios.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div
+            class="card m-3"
+            @click="mostrarServicio('carpinteria')"
+            style="cursor: pointer"
+          >
+            <div class="card-body">
+              <h5 class="card-title text-end fs-4">Carpintería:</h5>
+              <p class="card-text text-end fs-6">
+                Realizamos trabajos de carpintería, incluyendo la instalación de
+                puertas, ventanas, muebles y otras estructuras de madera a
+                medida para tus proyectos.
               </p>
             </div>
           </div>
@@ -113,16 +197,18 @@
       </div>
     </div>
 
-    <div class="vision row mt-5 p-2 shadow d-flex align-items-center justify-content-center">
+    <div
+      class="vision row mt-5 p-2 shadow d-flex align-items-center justify-content-center"
+    >
       <div class="vis">
         <h4 class="col-2 w-100 fs-2">Nuestra Visión</h4>
 
         <p class="col-10 p-3 lh-lg fs-3">
-          En ConstruModerna, nuestra visión es liderar el camino en la integración
-          de la tecnología de vanguardia en la industria de la construcción y el
-          diseño. Creemos que la creatividad y la innovación deben estar en el
-          corazón de cada proyecto, y estamos comprometidos a superar tus
-          expectativas en cada paso del camino.
+          En ConstruModerna, nuestra visión es liderar el camino en la
+          integración de la tecnología de vanguardia en la industria de la
+          construcción y el diseño. Creemos que la creatividad y la innovación
+          deben estar en el corazón de cada proyecto, y estamos comprometidos a
+          superar tus expectativas en cada paso del camino.
         </p>
       </div>
     </div>
@@ -135,25 +221,26 @@
         convertir tus ideas en realidad.
       </p>
     </div>
-    <contacto/>
-    <carrouselMenu/>
+
+    <contacto />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
-import carrouselMenu from '@/components/carrouselNavbar.vue'
-import contacto from '@/components/contacto.vue'
+import contacto from "@/components/contacto.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-
-    carrouselMenu,
-    contacto
-  }
-}
+    contacto,
+  },
+  methods: {
+    mostrarServicio(servicio) {
+      this.$router.push({ name: servicio });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -165,7 +252,7 @@ img {
   margin-top: 30px;
 }
 
-.container-fluid{
+.container-fluid {
   color: white;
 }
 .portada {
@@ -178,19 +265,21 @@ img {
 .titulo {
   text-align: center;
   color: white;
-  background-color: rgba(22, 22, 22, 0.3);
+  background-color: rgba(22, 22, 22, 0.5);
+  /* box-shadow: 0 0 30px rgba(255, 255, 0, 0.5); */
 }
 .presentacion p {
   font-size: 30px;
 }
 .card {
-    background: rgba(22, 22, 22, 0.95);
-    border: none;
+  background: rgba(11, 83, 69, 0.9);
+  border: none;
+  box-shadow: 0 0 10px rgba(245, 245, 174, 0.5);
 }
 .servicios {
   background-color: rgba(8, 8, 8, 0.3);
 }
-.vision{
+.vision {
   background-image: url("@/assets/imagenes3d/cocinaModernaImagen.png");
   width: 100%;
   height: 400px;
@@ -198,30 +287,29 @@ img {
   background-position: center bottom;
   text-align: center;
 }
-.vis{
+.vis {
   background-color: rgba(22, 22, 22, 0.7);
   padding-top: 20px;
 }
-.vis p{
+.vis p {
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-            p {
-                text-align: justify; /* Alineación justificada en dispositivos móviles */
-                font-size: 12px; /* Tamaño de letra más pequeño en dispositivos móviles */
-            }
-            .portada {
-                background-image: url("@/assets/imagenes3d/TH·-1800.effectsResult.png");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-x: center;
-                width: 100%;
-                height: 400px;
-              }
-              .vision{
-                height: auto;
-                width: auto;
-              }
-         }
-
+  p {
+    text-align: justify; /* Alineación justificada en dispositivos móviles */
+    font-size: 12px; /* Tamaño de letra más pequeño en dispositivos móviles */
+  }
+  .portada {
+    background-image: url("@/assets/imagenes3d/TH·-1800.effectsResult.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 100%;
+    height: 400px;
+  }
+  .vision {
+    height: auto;
+    width: auto;
+  }
+}
 </style>

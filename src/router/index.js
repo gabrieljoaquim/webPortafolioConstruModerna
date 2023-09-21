@@ -17,14 +17,21 @@ const routes = [
   },
   {
     path: '/pinturas',
-    name: 'Pinturas',
+    name: 'pinturas',
     component: function () {
       return import('../views/Pinturas.vue')
     }
   },
   {
+    path: '/modelado3d',
+    name: 'modelado3d',
+    component: function () {
+      return import('../views/Modelado3d.vue')
+    }
+  },
+  {
     path: '/carpinteria',
-    name: 'Carpinteria',
+    name: 'carpinteria',
     component: function () {
       return import('../views/Carpinteria.vue')
     }
@@ -38,21 +45,42 @@ const routes = [
   },
   {
     path: '/obras',
-    name: 'Obras',
+    name: 'obras',
     component: function () {
       return import('../views/Obras.vue')
     }
   },
   {
+    path: '/revestimientos',
+    name: 'revestimientos',
+    component: function () {
+      return import('../views/Revestimientos.vue')
+    }
+  },
+  {
+    path: '/aluminios',
+    name: 'aluminios',
+    component: function () {
+      return import('../views/Aluminios.vue')
+    }
+  },
+  {
+    path: '/electricidad',
+    name: 'electricidad',
+    component: function () {
+      return import('../views/Electricidad.vue')
+    }
+  },
+  {
     path: '/plomeria',
-    name: 'Plomeria',
+    name: 'plomeria',
     component: function () {
       return import('../views/Plomeria.vue')
     }
   },
   {
     path: '/galeria',
-    name: 'Galeria',
+    name: 'galeria',
     component: function () {
       return import('../views/Galeria.vue');
     },

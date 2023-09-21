@@ -41,8 +41,10 @@ export default {
 
 <style scoped>
 nav {
-  background-color: rgba(22, 22, 22, 0.95);
+  /* background-color: rgba(22, 22, 22, 0.95); */
+  background: rgba(11, 83, 69, 1);
   width: 100%;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
 }
 .btn-wsp {
   position: fixed;
