@@ -5,29 +5,86 @@
         class="portada col shadow d-flex align-items-center justify-content-center"
       >
         <div class="titulo p-4 rounded">
-          <h2>Construyendo Futuros en 3D: Tu Visión, Nuestra Realidad</h2>
+          <h2>Construcción y Diseño: Transformando Tu Visión en Realidad</h2>
         </div>
       </div>
     </div>
     <div class="row pt-3 pt-md-5">
       <p class="fs-2 fs-md-3">
-        Bienvenidos a ConstruModerna: Tu Socio en la Transformación Digital
+        Bienvenidos a ConstruModerna: Tu Socio en la Transformación de tus
+        Sueños.
       </p>
 
-      <p class="fs-4">
-        En ConstruModerna, nos apasiona la innovación y la transformación
-        digital en el mundo de la construcción y el diseño moderno. Somos
-        apasionados por el modelado 3D, el renderizado, la animación 3D, los
-        videos de arquitectura 3D, la realidad virtual y los hologramas 3D.
-      </p>
+      <div class="presentacion">
+        <p class="fs-5">
+          En <strong class="unstyled">ConstruModerna</strong>, no solo construimos edificaciones,
+          creamos sueños y transformamos ideas en realidad. Nos enorgullece ser
+          tu socio en la construcción y diseño moderno, y aquí está cómo hacemos
+          que tus proyectos sean extraordinarios:
+        </p>
 
-      <p class="fs-4">
-        Nuestra misión es llevar tus proyectos y visiones arquitectónicas al
-        siguiente nivel, utilizando las tecnologías más avanzadas disponibles.
-        Creemos que la combinación de la creatividad y la tecnología puede dar
-        vida a ideas extraordinarias, y estamos comprometidos a hacer
-        precisamente eso para cada uno de nuestros clientes.
-      </p>
+        <ol class="description fs-6 p-5 list-unstyled">
+          <li>
+            <strong>Diseño y Planificación:</strong> Comenzamos por sentarnos
+            contigo, escuchar tus ideas y sueños, y luego utilizamos nuestra
+            experiencia y creatividad para diseñar proyectos que superen tus
+            expectativas. Nuestro proceso de planificación es meticuloso y
+            preciso, utilizando el modelado 3D para visualizar cada detalle
+            antes de comenzar la construcción.
+          </li>
+
+          <li>
+            <strong>Construcción de Calidad:</strong> Nuestra experiencia en
+            albañilería, plomería, electricidad y más garantiza que cada aspecto
+            de tu proyecto se construya con los más altos estándares de calidad.
+            Desde las obras negras hasta las grises, nos aseguramos de que tu
+            estructura sea sólida y duradera.
+          </li>
+
+          <li>
+            <strong>Diseño Interior y Acabados:</strong> No nos detenemos en la
+            estructura básica. Nuestro equipo de expertos en diseño de
+            interiores se encarga de los acabados, la pintura, los enchapes y
+            los detalles finales. Cada rincón de tu proyecto reflejará belleza y
+            funcionalidad.
+          </li>
+
+          <li>
+            <strong>Ventanería y Carpintería:</strong> Instalamos ventanas y
+            puertas de alta calidad en aluminio y vidrio para que tu espacio sea
+            estéticamente agradable y eficiente energéticamente. Nuestra
+            carpintería crea muebles y estructuras de madera a medida, agregando
+            calidez y estilo a tus proyectos.
+          </li>
+
+          <li>
+            <strong>Herrería y Soldadura:</strong> Realizamos trabajos de
+            herrería y soldadura, incluyendo rejas, escaleras, puertas y
+            estructuras metálicas de alta calidad que no solo son funcionales,
+            sino también estéticamente impresionantes.
+          </li>
+
+          <li>
+            <strong>Servicios Especiales:</strong> También ofrecemos servicios
+            especiales como instalación de techos, canoas y más, asegurándonos
+            de que cada detalle esté cuidadosamente ejecutado.
+          </li>
+        </ol>
+
+        <div class="row justify-content-around pb-5">
+            <img id="imgPresentacion" class="col-3" src="@/assets/imagenes3d/cocinaModernaImagen.png" alt="">
+            <img id="imgPresentacion" class="col-3" src="@/assets/imagenes3d/cosinaPequeña.png" alt="">
+            <img id="imgPresentacion" class="col-3" src="@/assets/imagenes3d/lovyTerminado.png" alt="">
+        </div>
+
+        <p class="fs-5">
+          En ConstruModerna, creemos que la combinación de la creatividad y la
+          tecnología puede dar vida a ideas extraordinarias. Estamos
+          comprometidos a llevar tus proyectos y visiones arquitectónicas al
+          siguiente nivel, utilizando las tecnologías más avanzadas disponibles.
+        </p>
+
+      </div>
     </div>
     <div class="servicios shadow p-1">
       <div class="row">
@@ -248,10 +305,6 @@ export default {
   align-content: center;
   width: 100vw;
 }
-img {
-  margin-top: 30px;
-}
-
 .container-fluid {
   color: white;
 }
@@ -294,6 +347,15 @@ img {
 .vis p {
   width: 100%;
 }
+img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+strong{
+  color: rgb(35, 250, 207);
+}
+strong.unstyled {
+  color: inherit;
+}
 @media screen and (max-width: 768px) {
   p {
     text-align: justify; /* Alineación justificada en dispositivos móviles */
@@ -310,6 +372,9 @@ img {
   .vision {
     height: auto;
     width: auto;
+  }
+  .description {
+    background: rgba(0, 22, 22, 0.5);
   }
 }
 </style>

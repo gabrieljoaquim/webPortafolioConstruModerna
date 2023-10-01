@@ -1,13 +1,23 @@
 <template>
   <div class="electricidad">
-    <h2>Electricidad.</h2>
+    <div class="row justify-content-around">
+      <servicios class="col-sm-12 col-md-3 position-fixed"/>
+      <h2>Electricidad.</h2>
+      <div class="col-8">
+
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-    name:'Electricidad'
+import servicios from '@/components/servicios.vue'
 
+export default {
+    name:'Electricidad',
+  components:{
+    servicios
+  }
 }
 </script>
 

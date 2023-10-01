@@ -13,8 +13,6 @@ export default{
   components: {
     navbar,
   }
-
-
 }
 
 </script>
@@ -33,6 +31,7 @@ export default{
   text-align: center;
   /* color: white; */
   height: 100%;
+  padding-bottom: 10vh;
 }
 .container {
   margin: 20px; /* Margen para separar elementos del fondo */

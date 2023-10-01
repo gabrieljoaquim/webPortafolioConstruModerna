@@ -1,5 +1,21 @@
 <template>
   <div class="modelo">
+    <div class="col">
+      <p class="fs-4">
+        En ConstruModerna, nos apasiona la innovación y la transformación
+        digital en el mundo de la construcción y el diseño moderno. Somos
+        apasionados por el modelado 3D, el renderizado, la animación 3D, los
+        videos de arquitectura 3D, la realidad virtual y los hologramas 3D.
+      </p>
+
+      <p class="fs-4">
+        Nuestra misión es llevar tus proyectos y visiones arquitectónicas al
+        siguiente nivel, utilizando las tecnologías más avanzadas disponibles.
+        Creemos que la combinación de la creatividad y la tecnología puede dar
+        vida a ideas extraordinarias, y estamos comprometidos a hacer
+        precisamente eso para cada uno de nuestros clientes.
+      </p>
+    </div>
     <div class="col-sm-6">
           <div class="card m-3">
             <div class="card-body">
