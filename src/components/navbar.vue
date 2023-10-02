@@ -1,42 +1,85 @@
 <template>
-  
-    <nav class="navbar navbar-expand-md navbar-dark position-fixed">
-      <div class="container-fluid">
-        <span class="">
-          <h2 class="navbar-brand fs-2">ConstruModerna.</h2>
-        </span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <router-link class="nav-link" to="/">Presentacion</router-link>  
-            </li>
-            <li class="nav-item">  
-              <router-link class="nav-link" to="/galeria">Galeria.</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/registro">Registro</router-link>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-md navbar-dark position-fixed">
+    <div class="container-fluid">
+      <span class="">
+        <h2 class="navbar-brand fs-2">ConstruModerna.</h2>
+      </span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/">Presentacion</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/galeria">Galeria</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/registro">Registro</router-link>
+          </li>
+          <!-- <li class="nav-item">
+            <a
+              class="nav-link"
+              data-bs-toggle="offcanvas"
+              href="#offcanvasExample"
+              role="button"
+              aria-controls="offcanvasExample"
+            >
+              Servicios
+            </a>
+          </li> -->
+        </ul>
+
+        <!-- <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <servicios class="servicios" />
+          </div>
+        </div>-->
       </div>
-    </nav>
-
-    <div class="whatLink">
-      <a class="btn-wsp" href="https://api.whatsapp.com/send?phone=573224452460">
-        <img class="whatssap" src="@/assets/whatssap.png" alt="contacto">
-      </a>
     </div>
+  </nav>
 
+  <div class="whatLink">
+    <a class="btn-wsp" href="https://api.whatsapp.com/send?phone=573224452460">
+      <img class="whatssap" src="@/assets/whatssap.png" alt="contacto" />
+    </a>
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'navbar'
+import servicios from "@/components/servicios.vue";
 
-}
+export default {
+  name: "navbar",
+  components: {
+    servicios,
+  },
+};
 </script>
 
 <style scoped>
@@ -44,7 +87,7 @@ nav {
   /* background-color: rgba(22, 22, 22, 0.95); */
   background: rgba(11, 83, 69, 1);
   width: 100%;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 .btn-wsp {
   position: fixed;
@@ -54,7 +97,7 @@ nav {
   bottom: 30px;
   right: 30px;
   border-radius: 50px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-wsp:hover {
@@ -63,7 +106,7 @@ nav {
 .whatssap {
   width: 80px;
 }
-.whatLink{ 
+.whatLink {
   z-index: 1000;
 }
 </style>

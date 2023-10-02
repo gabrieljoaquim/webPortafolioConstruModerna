@@ -100,9 +100,12 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('modelado3d')"
-            style="cursor: pointer"
           >
+          <img
+              src="@/assets/imagenes3d/render-modelo-1.png"
+              class="card-img-top col-sm-8"
+              alt="simientos1"
+            />
             <div class="card-body">
               <h5 class="card-title text-end fs-4">
                 Modelado 3D y Planificación:
@@ -119,9 +122,8 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('obras')"
-            style="cursor: pointer"
           >
+          <img src="@/assets/img/CONSTRUCCION.jpg" class="card-img-top" alt="simientos1">
             <div class="card-body">
               <h5 class="card-title text-start fs-4">Albañilería:</h5>
               <p class="card-text text-start fs-6">
@@ -136,9 +138,8 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('plomeria')"
-            style="cursor: pointer"
           >
+          <img src="@/assets/img/instalacionSanitaria.jpg" class="card-img-top" alt="instalacionSanitaria">
             <div class="card-body">
               <h5 class="card-title text-end fs-4">Plomería:</h5>
               <p class="card-text text-end fs-6">
@@ -152,9 +153,8 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('electricidad')"
-            style="cursor: pointer"
           >
+          <img src="@/assets/img/instalacionElectrica.jpg" class="card-img-top" alt="instalacionElectrica">
             <div class="card-body">
               <h5 class="card-title text-start fs-4">
                 Electricidad Residencial:
@@ -170,9 +170,8 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('pinturas')"
-            style="cursor: pointer"
           >
+          <img src="@/assets/img/pinturas2.jpg" class="card-img-top" alt="pinturas2">
             <div class="card-body">
               <h5 class="card-title text-end fs-4">Pintura y Acabados:</h5>
               <p class="card-text text-end fs-6">
@@ -186,9 +185,8 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('metales')"
-            style="cursor: pointer"
           >
+          <img src="@/assets/img/cerrageria-copia.jpg" class="card-img-top" alt="cerrageria">
             <div class="card-body">
               <h5 class="card-title text-start fs-4">Herrería y Soldadura:</h5>
               <p class="card-text text-start fs-6">
@@ -202,9 +200,8 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('aluminios')"
-            style="cursor: pointer"
           >
+          <img src="@/assets/img/ventaneriaAluminio.jpg" class="card-img-top" alt="ventaneriaAluminio">
             <div class="card-body">
               <h5 class="card-title text-end fs-4">
                 Ventanería en Aluminio y Vidrio:
@@ -220,9 +217,8 @@
         <div class="col-sm-6">
           <div
             class="card m-3"
-            @click="mostrarServicio('revestimientos')"
-            style="cursor: pointer"
           >
+          <img src="@/assets/img/enchapes.jpeg" class="card-img-top" alt="enchapes">
             <div class="card-body">
               <h5 class="card-title text-start fs-4">
                 Enchapes en Cerámicas y Porcelanato:
@@ -237,10 +233,9 @@
 
         <div class="col-sm-6">
           <div
-            class="card m-3"
-            @click="mostrarServicio('carpinteria')"
-            style="cursor: pointer"
+            class="card m-3"            
           >
+          <img src="@/assets/img/MaderaPared.png" class="card-img-top" alt="MaderaPared">
             <div class="card-body">
               <h5 class="card-title text-end fs-4">Carpintería:</h5>
               <p class="card-text text-end fs-6">

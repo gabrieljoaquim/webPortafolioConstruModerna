@@ -92,7 +92,7 @@
           </div>
         </div>
   
-        <div class="col-sm">
+        <!-- <div class="col-sm">
           <div
             class="card m-3"
             @click="mostrarServicio('plomeria')"
@@ -106,9 +106,9 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
   
-        <div class="col-sm">
+        <!-- <div class="col-sm">
           <div
             class="card m-3"
             @click="mostrarServicio('electricidad')"
@@ -124,7 +124,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
   
         <div class="col-sm">
           <div

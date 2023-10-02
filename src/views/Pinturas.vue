@@ -1,10 +1,12 @@
 <template>
   <div class="pinturas">
-    <div class="row justify-content-around">
-      <servicios class="col-sm-12 col-md-3 position-fixed"/>
-      <h2>Pinturas</h2>
-      <div class="col-8">
+    <div class="row justify-content-around mt-5">
+      <div class="row">
 
+        <h2>Pinturas</h2>
+
+        
+        
       </div>
     </div>
   </div>
