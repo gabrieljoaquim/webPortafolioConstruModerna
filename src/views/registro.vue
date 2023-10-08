@@ -1,8 +1,8 @@
 <template>
 <div class="container">
+    <img src="@/assets/logo.png" class="card-img-top" alt="..." style="width: 300px;">
     <div class="card" style="width: 100%;">
-    <img src="@/assets/logo.png" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body mt-5">
         <p class="card-text">Este registro se utiliza para actualizar nuestra base de datos de clientes y brindarte acceso a nuestras promociones. De esta manera, estarás siempre informado acerca de las ofertas y descuentos que tenemos para ti.</p>
     </div>
     </div>

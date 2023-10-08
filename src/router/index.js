@@ -64,6 +64,13 @@ const routes = [
       return import('../views/Aluminios.vue')
     }
   },
+    {
+    path: '/apvista',
+    name: 'apvista',
+    component: function () {
+      return import('../views/ApVista.vue')
+    }
+  },
   {
     path: '/electricidad',
     name: 'electricidad',

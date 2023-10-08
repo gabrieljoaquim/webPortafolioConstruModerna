@@ -23,9 +23,9 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/galeria">Galeria</router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link" to="/registro">Registro</router-link>
-          </li>
+          </li> -->
           <!-- <li class="nav-item">
             <a
               class="nav-link"
