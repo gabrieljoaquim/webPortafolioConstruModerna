@@ -72,9 +72,9 @@
         </ol>
 
         <div class="row justify-content-around pb-5">
-            <img id="imgPresentacion" class="col-3" src="@/assets/imagenes3d/cocinaModernaImagen.png" alt="">
-            <img id="imgPresentacion" class="col-3" src="@/assets/imagenes3d/cosinaPequeña.png" alt="">
-            <img id="imgPresentacion" class="col-3" src="@/assets/imagenes3d/lovyTerminado.png" alt="">
+            <img id="imgPresentacion" class="col-ms-3 col-sm-10" src="@/assets/imagenes3d/cocinaModernaImagen.png" alt="">
+            <img id="imgPresentacion" class="col-md-3 col-sm-10" src="@/assets/imagenes3d/cosinaPequeña.png" alt="">
+            <img id="imgPresentacion" class="col-md-3 col-sm-10" src="@/assets/imagenes3d/lovyTerminado.png" alt="">
         </div>
 
         <p class="fs-5">
@@ -284,6 +284,9 @@ import contacto from "@/components/contacto.vue";
 
 export default {
   name: "HomeView",
+  mounted() {
+    document.title = "ConstruModerna";
+  },
   components: {
     contacto,
   },
@@ -292,6 +295,7 @@ export default {
       this.$router.push({ name: servicio });
     },
   },
+
 };
 </script>
 
