@@ -1,9 +1,9 @@
 <template>
   <div class="galeria">
     <h1 class="mt-5">Galeria.</h1>
-    <div class="row d-flex justify-content-around">
-      <div class="col-4" v-for="(item, index) in miGaleria" :key="index">
-        <div class="card" style="width: 18rem;">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 d-flex justify-content-around" v-for="(item, index) in miGaleria" :key="index">
+        <div class="card" style="width: 25rem;">
           <img :src="item.imagen" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{item.title}}</h5>
