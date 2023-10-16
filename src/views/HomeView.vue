@@ -17,7 +17,7 @@
 
       <div class="presentacion">
         <p class="fs-5">
-          En <strong class="unstyled">ConstruModerna</strong>, no solo construimos edificaciones,
+          En ConstruModerna, no solo construimos edificaciones,
           creamos sueños y transformamos ideas en realidad. Nos enorgullece ser
           tu socio en la construcción y diseño moderno, y aquí está cómo hacemos
           que tus proyectos sean extraordinarios:
@@ -25,49 +25,55 @@
 
         <ol class="description fs-6 p-5 list-unstyled">
           <li>
-            <strong>Diseño y Planificación:</strong> Comenzamos por sentarnos
+            <strong class="custom-strong">Diseño y Planificación:</strong> Comenzamos por sentarnos
             contigo, escuchar tus ideas y sueños, y luego utilizamos nuestra
             experiencia y creatividad para diseñar proyectos que superen tus
             expectativas. Nuestro proceso de planificación es meticuloso y
             preciso, utilizando el modelado 3D para visualizar cada detalle
             antes de comenzar la construcción.
+            <img class="image-hidden" src="@/assets/img/AtencionAlCliente.jpg" alt="Imagen de servicios especiales">
           </li>
 
           <li>
-            <strong>Construcción de Calidad:</strong> Nuestra experiencia en
+            <strong class="custom-strong">Construcción de Calidad:</strong> Nuestra experiencia en
             albañilería, plomería, electricidad y más garantiza que cada aspecto
             de tu proyecto se construya con los más altos estándares de calidad.
             Desde las obras negras hasta las grises, nos aseguramos de que tu
             estructura sea sólida y duradera.
+            <img class="image-hidden" src="@/assets/img/CalidadDeConstruccion.jpeg" alt="Imagen de construccion de calidad">
           </li>
 
           <li>
-            <strong>Diseño Interior y Acabados:</strong> No nos detenemos en la
+            <strong class="custom-strong">Diseño Interior y Acabados:</strong> No nos detenemos en la
             estructura básica. Nuestro equipo de expertos en diseño de
             interiores se encarga de los acabados, la pintura, los enchapes y
             los detalles finales. Cada rincón de tu proyecto reflejará belleza y
             funcionalidad.
+            <img class="image-hidden" src="@/assets/img/MaderaPared.png" alt="Imagen de diseño y acabados">
           </li>
 
           <li>
-            <strong>Ventanería y Carpintería:</strong> Instalamos ventanas y
+            <strong class="custom-strong">Ventanería y Carpintería:</strong> Instalamos ventanas y
             puertas de alta calidad en aluminio y vidrio para que tu espacio sea
             estéticamente agradable y eficiente energéticamente. Nuestra
             carpintería crea muebles y estructuras de madera a medida, agregando
             calidez y estilo a tus proyectos.
+            <img class="image-hidden" src="@/assets/img/CarpinteriaAluminio.jpg" alt="Imagen de servicios especiales">
           </li>
 
           <li>
-            <strong>Herrería y Soldadura:</strong> Realizamos trabajos de
+            <strong class="custom-strong">Herrería y Soldadura:</strong> Realizamos trabajos de
             herrería y soldadura, incluyendo rejas, escaleras, puertas y
             estructuras metálicas de alta calidad que no solo son funcionales,
             sino también estéticamente impresionantes.
+            <img class="image-hidden" src="@/assets/img/cerrageria-copia.jpg" alt="Imagen de servicios especiales">
           </li>
 
           <li>
-            <strong>Servicios Especiales:</strong> También ofrecemos servicios
+            <strong class="custom-strong">Servicios Especiales:</strong> También ofrecemos servicios
             especiales como instalación de techos, canoas y más, asegurándonos
             de que cada detalle esté cuidadosamente ejecutado.
+            <img class="image-hidden" src="@/assets/img/TechosYCanoas.jpg" alt="Imagen de servicios especiales">
           </li>
         </ol>
 
@@ -350,10 +356,19 @@ img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 strong{
+  font-size: 1.5rem;
   color: rgb(35, 250, 207);
 }
 strong.unstyled {
   color: inherit;
+}
+.custom-strong:hover + .image-hidden {
+  display: block; /* Muestra la imagen al pasar el cursor sobre la etiqueta <strong> */
+}
+
+.image-hidden {
+  width: 20rem;
+  display: none; /* Oculta la imagen por defecto */
 }
 @media screen and (max-width: 768px) {
   p {

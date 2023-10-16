@@ -21,7 +21,7 @@
             <router-link class="nav-link" to="/">Presentacion</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/galeria">Galeria</router-link>
+            <router-link class="nav-link" to="/galeria">Galería</router-link>
           </li>
           <!-- <li class="nav-item">
             <router-link class="nav-link" to="/registro">Registro</router-link>
